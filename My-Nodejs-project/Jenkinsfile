@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Build') {
+      steps {
+        script {
+          docker.build('nodejs-web-server')
+        }
+      }
+    }
+
+   
+
+    stage('Deploy') {
+      steps {
+        script {
+          docker.withRegistry('https://hub.docker.com/u/surajjadhav97', 'docker-credentials') {
+            docker.image('nodejs-web-server').push()
+          }
+        }
+      }
+    }
+  }
+}
+
