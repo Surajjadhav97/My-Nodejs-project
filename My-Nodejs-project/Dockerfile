@@ -11,5 +11,5 @@ COPY . .
 
 EXPOSE 3000
 
-ENTRYPOINT ["nohup node index.js > output.log 2>&1 &"]
+CMD ["bash", "-c", "node index.js > output.log 2>&1 &"]
 
