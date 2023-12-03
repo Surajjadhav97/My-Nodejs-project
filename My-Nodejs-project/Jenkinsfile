@@ -1,7 +1,21 @@
 pipeline {
   agent any
 
-  stages {
+  environment {
+						
+						url = "https://github.com/Surajjadhav97/My-Nodejs-project.git"
+  }
+  
+ stages {  
+       stage ("ClONE_PROJECT"){
+								
+							steps {
+										sh "rm -rf *"
+										sh "git clone $url"
+							
+							}
+       }
+   
     stage('Build') {
       steps {
         script {
