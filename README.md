@@ -125,3 +125,5 @@ Configure Docker credentials in Jenkins:
 In Jenkins, go to "Manage Jenkins" > "Manage Credentials" > "Jenkins" (or "Global") > "Add Credentials" to add your Docker Hub or other registry credentials.
 
 Trigger your Jenkins pipeline manually or let it be triggered automatically when changes are pushed to your version control system.
+
+Copy public ip of your ec2-instance <IP:3000> and paste in Browser.
